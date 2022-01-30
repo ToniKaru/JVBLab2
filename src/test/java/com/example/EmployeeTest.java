@@ -40,5 +40,11 @@ class EmployeeTest {
         assertTrue(employee.isPaid());
     }
 
+    @Test
+    void testToEquals(){
+        Employee employee = new Employee("emp4", 50000);
 
+        assertThat(employee.toString())
+            .isEqualTo("Employee [id=emp4, salary=50000.0]");
+    }
 }
