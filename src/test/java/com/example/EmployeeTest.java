@@ -29,6 +29,16 @@ class EmployeeTest {
         assertThat(employee.getSalary()).isEqualTo(25000);
     }
 
+    @Test
+    void paidUpdatesWhenPaidIsUpdated(){
+        Employee employee = new Employee("emp1", 20000);
+
+        var result = employee.isPaid();
+        employee.setPaid(true);
+
+        assertFalse(result);
+        assertTrue(employee.isPaid());
+    }
 
 
 }
