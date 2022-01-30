@@ -18,6 +18,17 @@ class EmployeeTest {
         assertThat(employee.getId()).isEqualTo("emp3");
     }
 
+    @Test
+    void salaryChangesWhenSalaryIsUpdated(){
+        Employee employee = new Employee("emp2", 40000);
+
+        var result = employee.getSalary();
+        employee.setSalary(25000);
+
+        assertThat(result).isEqualTo(40000);
+        assertThat(employee.getSalary()).isEqualTo(25000);
+    }
+
 
 
 }
