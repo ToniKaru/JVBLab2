@@ -21,6 +21,7 @@ class EmployeeManagerTest {
         var result = employeeManager.payEmployees();
 
         verify(bankServiceMock, times(2)).pay(anyString(), anyDouble());
+        assertEquals(2, result);
         assertTrue(employee1.isPaid());
         assertTrue(employee2.isPaid());
     }
