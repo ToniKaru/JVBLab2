@@ -34,7 +34,7 @@ class EmployeeManagerTest {
 
     @ParameterizedTest
     @MethodSource("employeeProvider")
-    void payEmployeeFailureShouldMarkEachAsUnpaid(Employee employee){
+    void failureToPayEmployeesShouldMarkEachAsUnpaid(Employee employee){
         BankService bankServiceStub = new BankServiceStub();
         EmployeeRepository employeeRepoMock = mock(EmployeeRepository.class);
         when(employeeRepoMock.findAll()).thenReturn(getTwoEmployees());
