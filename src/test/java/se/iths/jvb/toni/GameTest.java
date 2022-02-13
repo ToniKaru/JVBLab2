@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class GameTest {
 
     @Test
-    void scoreOfRollsWithoutBonusesShouldBeTotalNumberOfPinsKnockedDown(){
+    void scoreWithoutBonusesShouldBeTotalNumberOfPinsKnockedDown(){
         Game game = new Game();
 
         game.roll(5);
