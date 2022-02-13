@@ -9,6 +9,8 @@ public class Game {
     }
 
     public void roll(int pinsDown) {
+        if (pinsDown < 0 || pinsDown > 10)
+            throw new IllegalArgumentException("Pin count: " + pinsDown + " out of range");
         score += pinsDown;
     }
 
