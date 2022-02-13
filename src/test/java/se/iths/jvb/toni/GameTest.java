@@ -27,5 +27,16 @@ class GameTest {
         assertThrows(IllegalArgumentException.class, () -> game.roll(invalidPinCount));
     }
 
+    @Test
+    void completeGameShouldBeTenFrames(){
+        Game game = new Game();
+
+        for (int i = 0; i < 20; i++) {
+            game.roll(2);
+        }
+        game.roll(1);
+
+        assertThat(game.score()).isEqualTo(40);
+    }
 
 }
